@@ -34,8 +34,8 @@ namespace WpfApp5
                 return;
 					}
 
-			Pair pair = new Pair(a, b);
-			MessageBox.Show(pair.Sum().ToString());
+			Pair pair = new Pair(a, b); 
+			MessageBox.Show("Сумма 1-ой пары чисел:" + pair.Sum().ToString());
 
 
 		}
@@ -49,7 +49,7 @@ namespace WpfApp5
 			}
 
 			Pair pair = new Pair(a, b);
-			MessageBox.Show(pair.Sum().ToString());
+			MessageBox.Show("Сумма 2-ой пары чисел:" + pair.Sum().ToString());
 
 		}
 
@@ -64,7 +64,7 @@ namespace WpfApp5
 			}
 
 			Pair pair1 = new Pair(a, b);
-			Pair pair2 = new Pair(a, c);
+			Pair pair2 = new Pair(c, d);
 			Pair pair3 = pair1.Sum(pair2);
 			пара3_1.Text = pair3.One.ToString();
 			пара3_2.Text = pair3.Second.ToString();

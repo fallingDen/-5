@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp5"
         mc:Ignorable="d"
-        Title="Гамадрил " Height="450" Width="800" Icon="/s1200-5-8.jpg">
+        Title="Гамадрил-математик" Height="450" Width="800" Icon="/kisspng-emoji-monkey-sticker-meaning-text-messaging-emoji-face-5ac2f881db78c7.840062431522727041899.jpg">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="197"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="574*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF3E2525" Offset="1"/>
@@ -21,17 +27,17 @@
         </Grid.OpacityMask>
         <TextBox x:Name="пара1_1" HorizontalAlignment="Left" Margin="26,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="пара1_2" HorizontalAlignment="Left" Margin="26,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="пара3_2" HorizontalAlignment="Left" Margin="564,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-        <TextBox x:Name="пара2_1" HorizontalAlignment="Left" Margin="298,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="пара2_2" HorizontalAlignment="Left" Margin="298,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="пара3_1" HorizontalAlignment="Left" Margin="564,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <TextBox x:Name="пара3_2" HorizontalAlignment="Left" Margin="339,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="3"/>
+        <TextBox x:Name="пара2_1" HorizontalAlignment="Left" Margin="73,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+        <TextBox x:Name="пара2_2" HorizontalAlignment="Left" Margin="73,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+        <TextBox x:Name="пара3_1" HorizontalAlignment="Left" Margin="339,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="3"/>
         <Label Content="1 пара чисел" HorizontalAlignment="Left" Margin="26,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695"/>
-        <Label Content="2 пара чисел" HorizontalAlignment="Left" Margin="298,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695"/>
-        <Label Content="3 пара чисел" HorizontalAlignment="Left" Margin="564,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695"/>
+        <Label Content="2 пара чисел" HorizontalAlignment="Left" Margin="73,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3"/>
+        <Label Content="3 пара чисел" HorizontalAlignment="Left" Margin="339,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3"/>
         <Button Content="Расчитать сумму " HorizontalAlignment="Left" Margin="26,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_1_Пару_Чисел" ToolTip="" Background="#FF7B7B7B"/>
-        <Button x:Name="Button_Сложить_2_Пару_Чисел" Content="Расчитать сумму " HorizontalAlignment="Left" Margin="298,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_2_Пару_Чисел_Click" ToolTip="Расчитать сумму 2-ой пары чисел " Background="#FF7B7B7B"/>
-        <Button Content="Расчитать сумму" HorizontalAlignment="Left" Margin="564,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_Пары_Чисел" ToolTip="Расчитать сумму 1-ой и 2-ой пары чисел " Background="#FF7B7B7B"/>
-        <Menu VerticalAlignment="Top">
+        <Button x:Name="Button_Сложить_2_Пару_Чисел" Content="Расчитать сумму " HorizontalAlignment="Left" Margin="73,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_2_Пару_Чисел_Click" ToolTip="Расчитать сумму 2-ой пары чисел " Background="#FF7B7B7B" Grid.Column="3"/>
+        <Button Content="Расчитать сумму" HorizontalAlignment="Left" Margin="339,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_Пары_Чисел" ToolTip="Расчитать сумму 1-ой и 2-ой пары чисел " Background="#FF7B7B7B" Grid.Column="3"/>
+        <Menu VerticalAlignment="Top" Grid.ColumnSpan="4">
             <MenuItem Header="О программе" Click="MenuItem_Click_О_программе" ToolTip="Информация о программе"  >
             </MenuItem>
             <MenuItem Header="Выход" Click="MenuItem_Click_Выход" ToolTip="Закрывает рабочую программу" >

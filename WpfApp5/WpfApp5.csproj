@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="kisspng-emoji-monkey-sticker-meaning-text-messaging-emoji-face-5ac2f881db78c7.840062431522727041899.jpg" />
     <None Remove="s1200-5-8.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="kisspng-emoji-monkey-sticker-meaning-text-messaging-emoji-face-5ac2f881db78c7.840062431522727041899.jpg" />
     <Resource Include="s1200-5-8.jpg" />
   </ItemGroup>
 
