@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp5"
         mc:Ignorable="d"
-        Title="Гамадрил-математик" Height="450" Width="800" Icon="/kisspng-emoji-monkey-sticker-meaning-text-messaging-emoji-face-5ac2f881db78c7.840062431522727041899.jpg">
+        Title="Гамадрил-математик v.2.0" Height="450" Width="800" Icon="/kisspng-emoji-monkey-sticker-meaning-text-messaging-emoji-face-5ac2f881db78c7.840062431522727041899.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="197"/>
@@ -34,8 +34,8 @@
         <Label Content="1 пара чисел" HorizontalAlignment="Left" Margin="26,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695"/>
         <Label Content="2 пара чисел" HorizontalAlignment="Left" Margin="73,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3"/>
         <Label Content="3 пара чисел" HorizontalAlignment="Left" Margin="339,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3"/>
-        <Button Content="Расчитать сумму " HorizontalAlignment="Left" Margin="26,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_1_Пару_Чисел" ToolTip="" Background="#FF7B7B7B"/>
-        <Button x:Name="Button_Сложить_2_Пару_Чисел" Content="Расчитать сумму " HorizontalAlignment="Left" Margin="73,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_2_Пару_Чисел_Click" ToolTip="Расчитать сумму 2-ой пары чисел " Background="#FF7B7B7B" Grid.Column="3"/>
+        <Button Content="Уменьшить поля на 1 " HorizontalAlignment="Left" Margin="26,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_1_Пару_Чисел" ToolTip="Уменьшить поля на 1 " Background="#FF7B7B7B"/>
+        <Button x:Name="Button_Сложить_2_Пару_Чисел" Content="Уменьшить поля на 1 " HorizontalAlignment="Left" Margin="73,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_2_Пару_Чисел_Click" ToolTip="Уменьшить поля на 1 " Background="#FF7B7B7B" Grid.Column="3"/>
         <Button Content="Расчитать сумму" HorizontalAlignment="Left" Margin="339,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_Пары_Чисел" ToolTip="Расчитать сумму 1-ой и 2-ой пары чисел " Background="#FF7B7B7B" Grid.Column="3"/>
         <Menu VerticalAlignment="Top" Grid.ColumnSpan="4">
             <MenuItem Header="О программе" Click="MenuItem_Click_О_программе" ToolTip="Информация о программе"  >
