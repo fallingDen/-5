@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp5"
         mc:Ignorable="d"
-        Title="Гамадрил-математик v.2.0" Height="450" Width="800" Icon="/kisspng-emoji-monkey-sticker-meaning-text-messaging-emoji-face-5ac2f881db78c7.840062431522727041899.jpg">
+        Title="Гамадрил-Борыга v1.0" Height="450" Width="800" Icon="/kisspng-emoji-monkey-sticker-meaning-text-messaging-emoji-face-5ac2f881db78c7.840062431522727041899.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="197"/>
-            <ColumnDefinition Width="16*"/>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="574*"/>
+            <ColumnDefinition Width="213"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="576*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF3E2525" Offset="1"/>
                 <GradientStop Color="#FF7B7B7B" Offset="0.747"/>
+                <GradientStop Color="#FFC9EC00" Offset="0.997"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.OpacityMask>
@@ -25,19 +26,17 @@
                 <GradientStop Color="#FF61451C" Offset="0"/>
             </LinearGradientBrush>
         </Grid.OpacityMask>
-        <TextBox x:Name="пара1_1" HorizontalAlignment="Left" Margin="26,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="пара1_2" HorizontalAlignment="Left" Margin="26,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="пара3_2" HorizontalAlignment="Left" Margin="339,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="3"/>
-        <TextBox x:Name="пара2_1" HorizontalAlignment="Left" Margin="73,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
-        <TextBox x:Name="пара2_2" HorizontalAlignment="Left" Margin="73,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
-        <TextBox x:Name="пара3_1" HorizontalAlignment="Left" Margin="339,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="3"/>
-        <Label Content="1 пара чисел" HorizontalAlignment="Left" Margin="26,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695"/>
-        <Label Content="2 пара чисел" HorizontalAlignment="Left" Margin="73,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3"/>
-        <Label Content="3 пара чисел" HorizontalAlignment="Left" Margin="339,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3"/>
-        <Button Content="Уменьшить поля на 1 " HorizontalAlignment="Left" Margin="26,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_1_Пару_Чисел" ToolTip="Уменьшить поля на 1 " Background="#FF7B7B7B"/>
-        <Button x:Name="Button_Сложить_2_Пару_Чисел" Content="Уменьшить поля на 1 " HorizontalAlignment="Left" Margin="73,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_2_Пару_Чисел_Click" ToolTip="Уменьшить поля на 1 " Background="#FF7B7B7B" Grid.Column="3"/>
-        <Button Content="Расчитать сумму" HorizontalAlignment="Left" Margin="339,180,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_Пары_Чисел" ToolTip="Расчитать сумму 1-ой и 2-ой пары чисел " Background="#FF7B7B7B" Grid.Column="3"/>
-        <Menu VerticalAlignment="Top" Grid.ColumnSpan="4">
+        <TextBox x:Name="пара1_1" HorizontalAlignment="Left" Margin="26,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="пара1_2" HorizontalAlignment="Left" Margin="26,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="пара3_2" HorizontalAlignment="Left" Margin="339,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="3" Height="18" TextChanged="пара3_2_TextChanged"/>
+        <TextBox x:Name="пара2_1" HorizontalAlignment="Left" Margin="73,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="3" Height="18"/>
+        <TextBox x:Name="пара2_2" HorizontalAlignment="Left" Margin="73,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="3" Height="18"/>
+        <TextBox x:Name="пара3_1" HorizontalAlignment="Left" Margin="339,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True" Grid.Column="3" Height="18" TextChanged="пара3_1_TextChanged"/>
+        <Label Content="В наличии" HorizontalAlignment="Left" Margin="26,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Height="26" Width="81"/>
+        <Label Content="2 пара чисел" HorizontalAlignment="Left" Margin="73,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3" Height="26" Width="81"/>
+        <Label Content="3 пара чисел" HorizontalAlignment="Left" Margin="339,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.566,0.695" Grid.Column="3" Height="26" Width="81"/>
+        <Button Content="Расчитать сумму" HorizontalAlignment="Left" Margin="339,209,0,0" VerticalAlignment="Top" Width="120" Click="Button_Сложить_Пары_Чисел" ToolTip="Наличные с учётом прибыли " Background="#FF7B7B7B" Grid.Column="3" Height="20"/>
+        <Menu VerticalAlignment="Top" Grid.ColumnSpan="4" Height="18">
             <MenuItem Header="О программе" Click="MenuItem_Click_О_программе" ToolTip="Информация о программе"  >
             </MenuItem>
             <MenuItem Header="Выход" Click="MenuItem_Click_Выход" ToolTip="Закрывает рабочую программу" >
@@ -45,5 +44,37 @@
             <MenuItem Header="Анекдот" Click="MenuItem_Click_Анекдот" ToolTip="Анекдот" >
             </MenuItem>
         </Menu>
+        <Label Content="Рубли" HorizontalAlignment="Left" Margin="26,69,0,0" VerticalAlignment="Top" Height="26" Width="43"/>
+        <Label Content="Копейки" HorizontalAlignment="Left" Margin="26,113,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
+        <Label Content="Рубли" HorizontalAlignment="Left" Margin="76,69,0,0" VerticalAlignment="Top" Grid.Column="3" Height="26" Width="43"/>
+        <Label Content="Копейки" HorizontalAlignment="Left" Margin="76,113,0,0" VerticalAlignment="Top" Grid.Column="3" Height="26" Width="57"/>
+        <Label Content="Рубли" HorizontalAlignment="Left" Margin="339,69,0,0" VerticalAlignment="Top" Grid.Column="3" Height="26" Width="43"/>
+        <Label Content="Копейки" HorizontalAlignment="Left" Margin="339,113,0,0" VerticalAlignment="Top" Grid.Column="3" Height="26" Width="57"/>
+        <TextBox x:Name="Tb__Предупреждение_" Grid.Column="3" HorizontalAlignment="Left" Margin="78,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="78" IsEnabled="False" FontWeight="Bold" TextChanged="Tb__Предупреждение__TextChanged" RenderTransformOrigin="0.5,0.5" Text="Введи данные правильно " TextAlignment="Center" FontSize="22" Foreground="White" FontFamily="Agency FB" ToolTip="Это не предупреждение!! Введи данные правильно!!!!" Visibility="Hidden"   >
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFEA0909" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Content="Расчитать остатки" HorizontalAlignment="Left" Margin="339,234,0,0" VerticalAlignment="Top" Width="120" Click="Button_Вычесть_Пары_Чисел" ToolTip="Без комментарий " Background="#FF7B7B7B" Grid.Column="3" Height="20"/>
+        <Button Content="Разделить" HorizontalAlignment="Left" Margin="26,309,0,0" VerticalAlignment="Top" Width="120" Click="Button_Разделить_Пару_Чисел" ToolTip="Некоторых это слово пугает" Background="#FF7B7B7B" Height="20"/>
+        <TextBox x:Name="tb_Делитель" HorizontalAlignment="Left" Margin="26,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Label Content="Число на которое делим" HorizontalAlignment="Center" VerticalAlignment="Center" Width="156" Height="26"/>
+        <CheckBox x:Name="_1_пара" Content="Первая пара чисел" HorizontalAlignment="Left" Margin="26,249,0,0" VerticalAlignment="Top" Height="15" Width="125"/>
+        <CheckBox x:Name="_2_пара" Content="Вторая пара чисел" HorizontalAlignment="Left" Margin="26,269,0,0" VerticalAlignment="Top" Height="15" Width="123"/>
+        <CheckBox x:Name="_3_пара" Content="Третья пара чисел" HorizontalAlignment="Left" Margin="26,289,0,0" VerticalAlignment="Top" Height="15" Width="121"/>
     </Grid>
 </Window>

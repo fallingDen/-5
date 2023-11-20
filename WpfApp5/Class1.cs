@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Ribbon;
 
 namespace WpfApp5
 {
-	internal class Pair
+	 class Pair
 	{
-		private int _one;
-		private int _second;
+		protected int _one;
+		protected int _second;
 
-		public int One
+		public virtual int One
 		{
 			get
 			{
@@ -25,7 +26,7 @@ namespace WpfApp5
 				_one = value;
 			}
 		} // свойства
-		public int Second
+		public virtual int Second
 		{
 			get
 			{
@@ -85,5 +86,80 @@ namespace WpfApp5
 
 			return pair;
 		}
+
 	}
+	class Money : Pair
+	{
+
+        protected int _рубли;
+        protected int _копейки;
+		
+
+        public Money(int one, int second) : base(one, second)
+        {
+            _рубли= one;
+            _копейки = second;
+
+
+			if (_копейки > 100)
+			{
+				int x = _копейки / 100;
+				_копейки = _копейки % 100;
+				_рубли = _рубли + x;
+		    };
+
+        }       // конструктор 
+
+
+        public virtual int One
+        {
+            get
+            {
+                return _рубли;
+            }
+            set
+            {
+                _рубли = value;
+            }
+        } // свойства
+        public virtual int Second
+        {
+            get
+            {
+                return _копейки;
+            }
+            set
+            {
+                _копейки = value;
+            }
+        } // свойства
+
+        public static Money operator +(Money pair1, Money pair2)
+        {
+            return new Money(pair1.One + pair2.One, pair1.Second + pair2.Second);
+        }
+
+        public Money Raz(Money second)
+        {
+            return new Money(One - second.One, Second - second.Second);
+        }
+
+		public static void Division(ref Money pair, int s)
+		{
+
+			   int x = pair._рубли % s;
+
+			   x = x * 100 / s;
+
+			   pair._рубли = pair._рубли  /  s;
+     	       pair._копейки = pair._копейки / s;
+
+			   pair._копейки = pair._копейки + x ;
+
+        }
+
+      
+    }
+	
+
 }
